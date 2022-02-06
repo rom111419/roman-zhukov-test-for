@@ -9,7 +9,6 @@ import { FormService } from '../../core/services/form.service';
 import { CarFormService } from '../car.form.service';
 import { CarRestService } from '../car-rest.service';
 import { ActivatedRoute } from '@angular/router';
-import { CrudService } from '../../core/services/crud.service';
 import { EntityCollectionService, EntityCollectionServiceFactory } from '@ngrx/data';
 import { Label, LabelReadReqRes } from './label.model';
 import { CarI } from '../car.model';
@@ -28,7 +27,7 @@ export class CarLabelsComponent implements OnDestroy {
   filteredLabels$: Observable<LabelReadReqRes[]>;
   labels: string[] = [];
   allLabels: LabelReadReqRes[] = [];
-  uuid: string = this.activatedRoute.snapshot.params['id'] || '';
+  uuid: string = this.activatedRoute.snapshot?.params['id'] || '';
   subs: Subscription = new Subscription();
   labelEntity: EntityCollectionService<Label>;
   carEntity: EntityCollectionService<CarI>;
@@ -39,7 +38,6 @@ export class CarLabelsComponent implements OnDestroy {
     private f: FormService,
     private fb: FormBuilder,
     private form: CarFormService,
-    private crud: CrudService,
     private rest: CarRestService,
     private activatedRoute: ActivatedRoute,
     private cd: ChangeDetectorRef,
@@ -110,8 +108,8 @@ export class CarLabelsComponent implements OnDestroy {
     this.subs.add(this.carEntity.getByKey(this.uuid)
       .pipe(
         switchMap(car => {
-          const result = { ...car, labels_uuid: Array.from(new Set([ ...car.labels_uuid, event.option.value ])) };
-          return this.carEntity.update(result);
+            const result = { ...car, labels_uuid: Array.from(new Set([ ...car.labels_uuid, event.option.value ])) };
+            return this.carEntity.update(result);
           },
         ))
       .subscribe(),

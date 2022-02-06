@@ -5,12 +5,11 @@ import {
   EntityCollectionServiceElementsFactory,
   QueryParams,
 } from '@ngrx/data';
-import { CarCreateReqRes, CarUpdateReq } from './car.model';
+import { CarCreateReqRes } from './car.model';
 import { Observable } from 'rxjs';
-import { CrudService } from '../core/services/crud.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CarRestService extends EntityCollectionServiceBase<CarCreateReqRes> {
   constructor(public serviceElementsFactory: EntityCollectionServiceElementsFactory) {
@@ -27,9 +26,5 @@ export class CarRestService extends EntityCollectionServiceBase<CarCreateReqRes>
 
   override getWithQuery(queryParams: QueryParams | string, options?: EntityActionOptions): Observable<CarCreateReqRes[]> {
     return super.getWithQuery(queryParams, options);
-  }
-
-  updateCar(crud: CrudService, id: string, body: CarUpdateReq): Observable<CarCreateReqRes[]> {
-    return crud.update('patch', 'car', body) as Observable<CarCreateReqRes[]>;
   }
 }

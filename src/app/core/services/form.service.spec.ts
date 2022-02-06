@@ -1,6 +1,6 @@
-import { FormService } from '@app/core/services/form.service';
 import { TestBed } from '@angular/core/testing';
 import { FormBuilder } from '@angular/forms';
+import { FormService } from './form.service';
 
 describe('FormService', () => {
   let service: FormService;
@@ -30,8 +30,5 @@ describe('FormService', () => {
     expect(service.readFormArray(''));
   });
 
-  it('should call createForm method', () => {
-    expect(service.createForm());
-  });
 
 });
