@@ -1,0 +1,88 @@
+<ng-template #form>
+  <form [formGroup]="formGroup">
+
+    <mat-form-field appearance="fill">
+      <mat-label>NAME</mat-label>
+      <input matInput type="text" [formControlName]="'name'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>PLATE</mat-label>
+      <input matInput type="text" [formControlName]="'plate'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>MAKE</mat-label>
+      <input matInput type="text" [formControlName]="'make'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>MODEL</mat-label>
+      <input matInput type="text" [formControlName]="'model'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>YEAR</mat-label>
+      <input matInput type="text" [formControlName]="'year'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>DEVICE_TYPE</mat-label>
+      <input matInput type="text" [formControlName]="'device_type'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>DEVICE_SERIAL</mat-label>
+      <input matInput type="text" [formControlName]="'device_serial'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>TRACKER_TYPE</mat-label>
+      <input matInput type="text" [formControlName]="'tracker_type'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>VIN</mat-label>
+      <input matInput type="text" [formControlName]="'vin'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>DRIVER</mat-label>
+      <input matInput type="text" [formControlName]="'driver'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>CURRENT_ODOMETER</mat-label>
+      <input matInput type="number" [formControlName]="'current_odometer'">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>TANK_CAPACITY</mat-label>
+      <input matInput type="number" [formControlName]="'tank_capacity'">
+    </mat-form-field>
+
+
+  </form>
+</ng-template>
+
+<ng-template #addNew>
+  <h1>Add new car {{uuid}}</h1>
+  <ng-container [ngTemplateOutlet]="form"></ng-container>
+  <button mat-raised-button color="primary" (click)="createCar()">Save</button>
+  <button mat-raised-button color="primary" (click)="back()">Back</button>
+</ng-template>
+
+<ng-container *ngIf="(state.car$ | async) as car; else addNew">
+  <ng-container *ngIf="car">
+    <h1>Car with UUID {{uuid}}</h1>
+    <ng-container [ngTemplateOutlet]="form"></ng-container>
+    <app-car-labels></app-car-labels>
+
+    <button mat-raised-button color="primary" (click)="back()">Back</button>
+    <button mat-raised-button color="primary" [disabled]="!formGroup.valid"
+    (click)="uuid ? updateCar() : createCar()">Save</button>
+
+    <p class="attention" *ngIf="formGroup.invalid">Attention. Not all field are filled </p>
+  </ng-container>
+</ng-container>
+

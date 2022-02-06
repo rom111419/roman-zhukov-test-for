@@ -1,0 +1,10 @@
+:host {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    column-gap: 18px;
+    width: 100%;
+    margin: 20px 0;
+  }
+}

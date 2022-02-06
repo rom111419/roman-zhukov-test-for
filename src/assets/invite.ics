@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220204T103000Z
+DTEND:20220204T110000Z
+DTSTAMP:20220204T100600Z
+ORGANIZER;CN=olya@grinteq.com:mailto:olya@grinteq.com
+UID:0cp9joltcjg6kd7uu5um9u8ltc@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=info@rit-m.by;X-NUM-GUESTS=0:mailto:info@rit-m.by
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=olya@grinteq.com;X-NUM-GUESTS=0:mailto:olya@grinteq.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/xct-bfnk-qjp
+X-MICROSOFT-CDO-OWNERAPPTID:-651292942
+CREATED:20220204T100559Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nDo not edit this section of the description.\n\nT
+ his event has a video call.\nJoin: https://meet.google.com/xct-bfnk-qjp\n(G
+ B) +44 20 3956 1741 PIN: 897116442#\nView more phone numbers: https://tel.m
+ eet/xct-bfnk-qjp?pin=8463374889043&hs=7\n\nView your event at https://calen
+ dar.google.com/calendar/event?action=VIEW&eid=MGNwOWpvbHRjamc2a2Q3dXU1dW05d
+ ThsdGMgaW5mb0ByaXQtbS5ieQ&tok=MTYjb2x5YUBncmludGVxLmNvbTkwZWE2ZDFkNzlhOTMwM
+ jkxNjBhODg4NmVkNTQ0OTBkYjc3MjY5YmU&ctz=Europe%2FMinsk&hl=en&es=1.\n-::~:~::
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:
+ ~::-
+LAST-MODIFIED:20220204T100559Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro-call / Angular / Roman
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

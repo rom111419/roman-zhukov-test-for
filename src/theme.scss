@@ -1,0 +1,97 @@
+// https://github.com/shhdharmen/indepth-theming-material-components
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap");
+
+// primary, accent and warn palettes
+$indigo-primary: (
+  50: #f5f5f5,
+  100: #e9e9e9,
+  200: #d9d9d9,
+  300: #c4c4c4,
+  400: #9d9d9d,
+  500: #7b7b7b,
+  600: #555555,
+  700: #434343,
+  800: #262626,
+  900: #000000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000
+  )
+);
+$indigo-accent: (
+  50: #fce8ea,
+  100: #f7c5c8,
+  200: #e08e8a,
+  300: #cf645e,
+  400: #d34237,
+  500: #d32f18,
+  600: #c52419,
+  700: #b51915,
+  800: #a8110d,
+  900: #990000,
+  contrast: (
+    50: #990000,
+    100: #990000,
+    200: #990000,
+    300: #990000,
+    400: #990000,
+    500: #990000,
+    600: #990000,
+    700: #990000,
+    800: #990000,
+    900: #990000
+  )
+);
+
+$theming-material-components-primary: mat-palette($indigo-primary);
+$theming-material-components-accent: mat-palette($indigo-accent);
+$theming-material-components-warn: mat-palette($indigo-primary);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theming-material-components-theme: mat-light-theme(
+    $theming-material-components-primary,
+    $theming-material-components-accent,
+    $theming-material-components-warn
+);
+
+// Define  a custom typography config
+$heading-font-family: "'Work Sans', sans-serif";
+$typography: mat-typography-config(
+  $display-4: mat-typography-level(112px, $font-family: $heading-font-family),
+  $display-3: mat-typography-level(56px, $font-family: $heading-font-family),
+  $display-2: mat-typography-level(45px, $font-family: $heading-font-family),
+  $display-1: mat-typography-level(34px, $font-family: $heading-font-family),
+  $headline: mat-typography-level(24px, $font-family: $heading-font-family),
+  $title: mat-typography-level(20px, $font-family: $heading-font-family),
+);
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-warn: mat-palette($mat-deep-orange);
+$dark-theme: mat-dark-theme(
+    (
+      color: (
+        primary: $dark-primary,
+        accent: $dark-accent,
+        warn: $dark-warn,
+      ),
+    )
+);
+
+// Theme for notifications / snackbar
+$notifications-theme: (
+  default: #fff,
+  info: mat-color(mat-palette($mat-blue), 400),
+  success: mat-color(mat-palette($mat-green), 400),
+  warning: mat-color(mat-palette($mat-yellow), 400),
+  error: mat-color(mat-palette($mat-red), 400),
+);

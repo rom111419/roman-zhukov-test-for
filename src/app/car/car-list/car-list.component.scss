@@ -1,0 +1,7 @@
+:host {
+  .cars {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

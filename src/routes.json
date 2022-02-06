@@ -1,0 +1,6 @@
+{
+  "/label/:id": "/labels/:id",
+  "/label": "/labels",
+  "/car/:id": "/cars/:id",
+  "/car": "/cars"
+}

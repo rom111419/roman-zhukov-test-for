@@ -1,0 +1,19 @@
+<button mat-raised-button color="primary" (click)="addNew()">Add</button>
+<div *ngIf="(state.cars$ | async) as cars" class="cars">
+  <ng-container *ngFor="let car of cars">
+    <mat-card>
+      <mat-card-title-group>
+        <mat-card-title>{{car.name}}</mat-card-title>
+      </mat-card-title-group>
+      <mat-card-content>
+        plate: {{car.plate}} <br>
+        model: {{car.model}} <br>
+        device_type: {{car.device_type}} <br>
+
+        <button mat-raised-button color="primary" (click)="goTo(car.uuid)">Edit</button>
+        <button mat-raised-button color="primary" (click)="deleteCar(car.uuid)">Delete</button>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
+

@@ -1,0 +1,139 @@
+{
+  "labels": [
+    {
+      "uuid": "2fea364b-c122-41af-ae60-a90c417f7197",
+      "label": "Yellow"
+    },
+    {
+      "uuid": "d1707ae7-9768-4907-bfa8-b8d959f22959",
+      "label": "Bus"
+    },
+    {
+      "uuid": "b1378cca-aaf5-4b5d-aa04-c324262b0269",
+      "label": "Estonia"
+    },
+    {
+      "uuid": "e8eb7b6a-48d1-4854-b7aa-702419341bdc",
+      "label": "Damaged"
+    },
+    {
+      "label": "Blue",
+      "uuid": "Xe2H5vA"
+    },
+    {
+      "label": "qwer",
+      "uuid": "p6X1PKR"
+    }
+  ],
+  "cars": [
+    {
+      "uuid": "00e16609-14bc-45e7-9c45-483057eef744",
+      "name": "Test vehicle 4",
+      "plate": "GENX",
+      "make": "Sierra",
+      "model": "Wireless",
+      "year": "2009",
+      "device_type": "SW",
+      "device_serial": "SierraWireless1",
+      "tracker_type": "fleet",
+      "vin": "r344L0Zttrc2",
+      "driver": "rrer",
+      "current_odometer": 32,
+      "tank_capacity": 33,
+      "labels_uuid": [
+        "d1707ae7-9768-4907-bfa8-b8d959f22959",
+        "b1378cca-aaf5-4b5d-aa04-c324262b0269",
+        "e8eb7b6a-48d1-4854-b7aa-702419341bdc"
+      ]
+    },
+    {
+      "uuid": "e68aa806-1375-41ff-82cd-3cfe1ca179ab",
+      "name": "Test vehicle 5",
+      "plate": "Device ID 35275309",
+      "make": "Toyota",
+      "model": null,
+      "year": null,
+      "device_type": "AT1",
+      "device_serial": "10199ggg5",
+      "tracker_type": "asset",
+      "vin": null,
+      "driver": null,
+      "labels_uuid": [
+        "2fea364b-c122-41af-ae60-a90c417f7197",
+        "d1707ae7-9768-4907-bfa8-b8d959f22959"
+      ]
+    },
+    {
+      "uuid": "0847a5c6-c0cc-49bc-8dd2-8075af035038",
+      "name": "Test vehicle 6",
+      "plate": null,
+      "make": null,
+      "model": null,
+      "year": null,
+      "device_type": "FRD",
+      "device_serial": "355950110008064",
+      "tracker_type": "fleet",
+      "vin": "x344Lreee2",
+      "driver": "Test Driver 4",
+      "current_odometer": 123,
+      "tank_capacity": 30.7,
+      "labels_uuid": [
+        "e8eb7b6a-48d1-4854-b7aa-702419341bdc"
+      ]
+    },
+    {
+      "uuid": "7998bd42-bf10-4902-9301-7b3d0a80a018",
+      "name": "Test vehicle 7",
+      "plate": "23234",
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "year": "2016",
+      "device_type": "SW",
+      "device_serial": "00012345678",
+      "tracker_type": "fleet",
+      "vin": "1GCVKdaasGZ233393",
+      "driver": null,
+      "current_odometer": 6783,
+      "tank_capacity": null,
+      "labels_uuid": [
+        "b1378cca-aaf5-4b5d-aa04-c324262b0269"
+      ]
+    },
+    {
+      "uuid": "9061516c-66a8-4ad2-9a38-4fc3ff336fbc",
+      "name": "Test vehicle 8",
+      "plate": "237TMY",
+      "make": "Škoda",
+      "model": "Superb",
+      "year": "2018",
+      "device_type": "FMX",
+      "device_serial": "35209301233331035",
+      "tracker_type": "fleet",
+      "vin": "TMBJ44437549564",
+      "driver": "Test Driver 5",
+      "current_odometer": 57513,
+      "tank_capacity": 19.8,
+      "labels_uuid": [
+        "e8eb7b6a-48d1-4854-b7aa-702419341bdc"
+      ]
+    },
+    {
+      "uuid": "5cd40dc9-ad7b-48f8-9bc6-d7faeefe519d",
+      "name": "Test vehicle 9",
+      "plate": null,
+      "make": null,
+      "model": null,
+      "year": 2006,
+      "device_type": "SW",
+      "device_serial": "00012345678-1111122",
+      "tracker_type": "fleet",
+      "vin": null,
+      "driver": null,
+      "current_odometer": 39994,
+      "tank_capacity": 21,
+      "labels_uuid": [
+        "2fea364b-c122-41af-ae60-a90c417f7197"
+      ]
+    }
+  ]
+}

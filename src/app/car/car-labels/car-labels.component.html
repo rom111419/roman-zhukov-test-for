@@ -1,0 +1,26 @@
+<mat-form-field appearance="fill">
+  <mat-label>Labels</mat-label>
+  <mat-chip-list #chipList aria-label="Label selection">
+    <mat-chip
+      *ngFor="let label of labels"
+      (removed)="remove(label)">
+      {{label}}
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip>
+    <input
+      placeholder="New label..."
+      #labelInput
+      [formControl]="labelCtrl"
+      [matAutocomplete]="auto"
+      [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+    <mat-option *ngFor="let label of filteredLabels$ | async" [value]="label.uuid">
+      {{label.label}}<button mat-raised-button color="primary" (click)="deleteLabel(label, $event)">Delete</button>
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
